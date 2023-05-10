@@ -46,7 +46,7 @@
             <div class="navigation-links">
                 <a href="#" data-text="HOME" id="home-link" >HOME</a>
                 <a href="#" data-text="ABOUT" id="about-link" >ABOUT</a>
-                <a href="#" data-text="BLOG" id="blog-link" >BLOG</a>
+                <a href="{% url 'blog_view' %}" data-text="BLOG" >BLOG</a>
                 <a href="#" data-text="CONTACT" id="contact-link" >CONTACT</a>
             </div>
         </div>
@@ -89,7 +89,7 @@
             </div>
             <!--header image-->
             <div class="header-image">
-            <img src="images/man.jpg" alt="logo">
+            <!-- <img src="{% static 'images/man.jpg' %}" alt="logo"> -->
             </div>
             <!--header image end-->
         </div>
@@ -109,17 +109,17 @@
             <!--about description-->
                <span class="about-first-line">
                     I'm creative 
-                    <span class="color">web developer</span>
-                     based in New York , USA </span>
+                    <span class="color">software engineer.</span>
+                     </span>
                      <br>
-               <span class="about-second-line"> With 20 years of experience as a professional Web developer, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.</span>
+               <span class="about-second-line"> With 5 years of experience as a tech geek, I have acquired the skills and knowledge necessary to make your project a success. I enjoy every step while working.</span>
                <div class="cv">
                 <a href="#"><button>Download <span class="colors">CV</span></button></a>
             </div>
             </div>
             <!--about picture-->
             <div class="about-img">
-                <img src="{% static 'images/about.jpg' %}" alt="Your Image">
+                <img src="{% static 'images/profile.jpg' %}" alt="Your Image" style="height: 500px; width: 400px;">
             </div>
             </div>
     
