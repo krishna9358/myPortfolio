@@ -12,6 +12,4 @@ class blog_view(ListView):
     model = Post
     template_name = 'main/blog_view.html'
 
-class blog_detail_view(DetailView):
-    model = Post
-    template_name = 'main/article.html'
+render
