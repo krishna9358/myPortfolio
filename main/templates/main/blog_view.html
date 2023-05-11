@@ -1,0 +1,10 @@
+<h1>POST</h1>
+<ul>
+{% for postquery in object_list %} <!-- object list is in the database which ever thing we have posted there  -->
+<li><a href=" {% url 'article' postquery.pk %}">
+{{postquery.title }} </a>   - {{ postquery.author }}[ {{ postquery.author.first_name }} {{ postquery.author.last_name }} ] - {{ postquery.author.email}} <br>
+</li>
+{{ postquery.body }}
+<br>
+{%  endfor %}
+</ul>
