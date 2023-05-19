@@ -17,22 +17,23 @@
 <body>
         <!--blog-->
         <div>
-        <div class="blog-header"> Blogs</span>
-            <span class ="header-caption"> My Latest <span class="color"> blog posts.</span></span></div>
+        <div class="blog-header"> Blogs
+            <span class ="header-caption"> My Latest <span class="color"> blog posts.</span></span>
+            <button style="padding:8px; background-color: #c70039;  border: 1px solid grey"><a href="{% url 'add_blog_post' %}" style="text-decoration: none;color:white;"> +  Add Blog</a></button>
+        </div>
+
             <div class="blog-content">
                     {% for postquery in object_list %} <!-- object list is in the database which ever thing we have posted there  -->
                  <div class="blogs">
                      <a href="{% url 'article' postquery.pk %}"> 
                      <div class="img">
                         <img src="{% static 'images/post-one.jpg' %}" alt="blog-one">
-                        <div class="blog-date">8 May,20</div>
+                        <div class="blog-date"> 10-05-2023</div>
                      </div>
 
                      <div class="blog-text">
                         <!-- change this place when want to add the image changing feature -->
-                         <h3>{{postquery.title }}</h3>
-                         <small>{{ postquery.author }}[ {{ postquery.author.first_name }} {{ postquery.author.last_name }} ] - {{ postquery.author.email}} </small>
-                         <p>      {{ postquery.body }}</p>
+                         <h4 style="font-size: 3vh;">{{postquery.title }}</h4>
                               
                      </div></a>
                  </div>       
@@ -48,13 +49,3 @@
         <!--blog end-->
 </body>
 </html>
-        {% for postquery in object_list %} <!-- object list is in the database which ever thing we have posted there  -->
-        
-        <li><a href=" ">
-        {{postquery.title }} </a>   - {{ postquery.author }}[ {{ postquery.author.first_name }} {{ postquery.author.last_name }} ] - {{ postquery.author.email}} <br>
-        </li>
-        {{ postquery.body }}
-        <br>
-        {%  endfor %}
-        </ul>
-            
